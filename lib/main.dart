@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'widgets/CalcButton.dart';
 
 void main() {
@@ -16,12 +17,40 @@ class CalcApp extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              Container(
+                padding: EdgeInsets.only(right: 12),
+                child: Text(
+                  '123*123',
+                  style: GoogleFonts.rubik(
+                    textStyle: TextStyle(
+                      fontSize: 24
+                    ),
+                    color: Colors.white
+                    ),
+                ),
+                alignment: Alignment(1,1),
+              ),
+              Container(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  '123',
+                  style: GoogleFonts.rubik(
+                    textStyle: TextStyle(
+                      fontSize: 48
+                    ),
+                    color: Colors.white
+                    ),
+                ),
+                alignment: Alignment(1,1),
+              ),
+              SizedBox(height: 40,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalcButton(
                     text: 'AC',
                      fillColor: 0xFF6C807F,
+                     textSize: 20,
                     ),
                     CalcButton(
                     text: 'C',
@@ -59,6 +88,7 @@ class CalcApp extends StatelessWidget {
                     text: '*',
                      fillColor: 0xFFFFFFFF,
                       textColor: 0xFF65BDAC,
+                       textSize: 24,
                     ),
                 ],
               ),
@@ -82,6 +112,7 @@ class CalcApp extends StatelessWidget {
                     text: '-',
                      fillColor: 0xFFFFFFFF,
                       textColor: 0xFF65BDAC,
+                       textSize: 38,
                     ),
                 ],
               ),
