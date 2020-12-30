@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'widgets/CalcButton.dart';
 import 'package:math_expressions/math_expressions.dart';
 
 void main() {
+
   runApp(CalcApp());
 }
 
@@ -51,7 +53,12 @@ void allClear(String text) {
   
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Calculator',
       home: Scaffold(
           backgroundColor: Color(0xFF283637),
